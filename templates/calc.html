@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+	<main class="calc-section">
+		<div class="section-content">
+			<h2>Copy paste datasets per version </h2>
+			<p>1. Export CSV's from Client ID data. One colum with Revenue, one row per visitor.</p>
+			<p>2. Open CSV in text editor and copy paste.
+			Should be in format with spaces as delimiter. Example: "0 300 0 0 829" etc</p>
+		
+
+			<form method="POST" action="/calc">
+				{{ form.hidden_tag() }}
+				
+				<div class="form-group">
+					{{ form.first_name.label }}
+					{{ form.first_name }}
+				</div>
+
+				<div class="form-group">
+					{{ form.last_name.label }}
+					{{ form.last_name }}
+				</div>
+				<div class="form-group">
+					{{ form.twosided.label }}
+					{{ form.twosided }}
+				</div>
+
+
+				{{ form.submit(class="btn-primary")}}	
+			</form>
+		</div>
+	</main>
+{% endblock %}

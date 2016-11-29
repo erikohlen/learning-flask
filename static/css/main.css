@@ -1,5 +1,5 @@
 html, body, h1 {
-	margin: 0;
+	margin-left:100px;
 	padding: 0;
 }
 
@@ -8,8 +8,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
-h2 {
+h2,p {
 	font-weight: 300;
+	width:500px;
 	letter-spacing: -1.2px;
 }
 
@@ -34,11 +35,10 @@ pull-right {
 	clear: both;
 }
 
-.section-content {
-	color: #3a3a3a;
-	float: left;
-	width: 340px;
+.form-group {
+	width:500px;
 }
+
 
 .section-device {
 	float: right;
@@ -56,4 +56,31 @@ pull-right {
 	letter-spacing: 0.23px;
 	width: 640px
 
+}
+
+
+
+
+/* calc */
+
+.calc-section {
+	float: center;
+	margin-left:100px;
+
+}
+
+.section-content {
+	color: #3a3a3a;
+	float: left;
+	width: 340px;
+}
+
+
+.form-group {
+	width:500px;
+	margin-bottom: 30px;
+}
+
+.p {
+	width:500px;
 }
