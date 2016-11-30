@@ -5,7 +5,7 @@ import scipy
 from scipy import stats
 
 app = Flask(__name__)
-
+inp = 'inp'
 
 app.secret_key = "development-key"
 
@@ -34,15 +34,15 @@ def signup():
 		if form.twosided.data == "yes":
 			alternative = "two-sided"
 		else:
-			alternative = "None"
+			alternative = None
 		results = str(scipy.stats.mannwhitneyu(orga, var1a, use_continuity=True, alternative=alternative))
-		return str(results)
-		
+		moreinfo = "More info: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mannwhitneyu.html"
+		render_template('calc.html', form=form)
 
 	elif request.method == "GET":
-		return render_template('calc.html', form=form)
+		return render_template('calc.html', form=form, inp='hej')
 
-	return render_template('calc.html', form=form)
+	return render_template('calc.html', form=form, results=results, moreinfo=moreinfo)
 
 if __name__ == "__main__":
 	app.run(debug=True)

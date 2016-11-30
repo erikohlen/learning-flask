@@ -47,14 +47,15 @@ pull-right {
 }
 
 .btn-primary {
-	background: #4285f4;
-	border: 1px solid #1266f1;
+	background: #c61618;
+	border: 1px solid #c61600;
 	color: #ffffff;
 	font-family; 'Open Sans', sans-serif;
 	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 0.23px;
 	width: 640px
+	
 
 }
 

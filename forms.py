@@ -4,7 +4,6 @@ from wtforms import StringField, PasswordField, SubmitField, TextField, RadioFie
 class SignupForm(Form):
 	first_name = StringField('Org:  ')
 	last_name = StringField('Var1:  ')
-	twosided = StringField('Two-sided? "yes" "no":')
-
+	twosided = StringField('Two-sided? "yes", "no":')
 	submit = SubmitField('Calculate')
  
